@@ -13,8 +13,9 @@ public class Aplicacao extends Vacina {
 	private int pessoasVacinadas = 0;
 	private int pessoasNaoVacinadas = 0;
 	
-	public Aplicacao(int qtdVacinas) {
+	public Aplicacao(int qtdVacinas, int qtdPopulacao) {
 		setQtdVacinas(qtdVacinas);
+		setQtdPopulacao(qtdPopulacao);
 	}
 	
 	public void vacinar(int qtdPessoas, int idade) {
@@ -23,11 +24,15 @@ public class Aplicacao extends Vacina {
 			
 			/* Só pode vacinar se existir vacinas, e se o restante que falta para ser 
 			 * vacinado for menor ou igual a quantidade de pessoas não vacinadas */
-			if (getQtdVacinas() > 0 && qtdPessoas <= getPessoasNaoVacinadas()) {
+			if (getQtdVacinas() >= qtdPessoas && qtdPessoas <= getPessoasNaoVacinadas()) {
 				setPessoasVacinadas(qtdPessoas + getPessoasVacinadas());
 				setQtdVacinas(getQtdVacinas() - qtdPessoas);
 			} else {
-				System.out.println("fail: a quantidade de pessoas informada utrapassa a quantidade de vacinas disponíveis ");
+				// Vacinar o máximo de pessoas que puder..
+				setPessoasVacinadas(qtdPessoas - (qtdPessoas - getQtdVacinas())); // input - (input - vacinas) = total
+				System.out.println("fail: " + (qtdPessoas - getQtdVacinas()) + " pessoas ficaram sem tomar a vacina");
+				System.out.println("fail: a quantidade de pessoas informada utrapassa a quantidade de vacinas disponíveis");
+				setQtdVacinas(0);
 			}
 		} else {
 			System.out.println("fail: não é possível vacinar, a idade não se encaixa dentro da faixa etária!");
@@ -82,7 +87,7 @@ public class Aplicacao extends Vacina {
 	}
 	
 	public void getPainelDados() {
-		System.out.println("----------------------------- Painel -------------------------------------");
+		System.out.println("\n----------------------------- Painel -------------------------------------");
 		System.out.println("\t\tFaixa etária: " + getfaixaEtariaInicio() + " anos à "+ getfaixaEtariaFim() + " anos");
 		System.out.println("--------------------------------------------------------------------------");
 		System.out.println("Total de Vacinas:\t" + getQtdVacinas() + "\t| População:\t\t\t" + getQtdPopulacao());
