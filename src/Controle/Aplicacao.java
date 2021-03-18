@@ -1,5 +1,7 @@
 package Controle;
 
+import java.util.ArrayList;
+
 /**
  * @author Isaque Véras
  *
@@ -12,10 +14,23 @@ public class Aplicacao extends Vacina {
 	private int porcentagemNaoVacinados = 0;
 	private int pessoasVacinadas = 0;
 	private int pessoasNaoVacinadas = 0;
+	private ArrayList<Vacina> vacinas;
 	
 	public Aplicacao(int qtdVacinas, int qtdPopulacao) {
 		setQtdVacinas(qtdVacinas);
 		setQtdPopulacao(qtdPopulacao);
+		
+		vacinas = new ArrayList<Vacina>();
+	}
+	
+	public void adicionarVacina(Vacina vacina) {
+		vacinas.add(vacina);
+	}
+	
+	public void listarVacinas() {
+		for (Vacina vacina : vacinas)
+			if(vacina instanceof Vacina)
+				System.out.println("Nome: " +((Vacina) vacina).getNome() + "\tDescrição: " + ((Vacina) vacina).getDescricao());
 	}
 	
 	public void vacinar(int qtdPessoas, int idade) {
@@ -87,7 +102,7 @@ public class Aplicacao extends Vacina {
 	}
 	
 	public void getPainelDados() {
-		System.out.println("\n----------------------------- Painel -------------------------------------");
+		System.out.println("----------------------------- Painel -------------------------------------");
 		System.out.println("\t\tFaixa etária: " + getfaixaEtariaInicio() + " anos à "+ getfaixaEtariaFim() + " anos");
 		System.out.println("--------------------------------------------------------------------------");
 		System.out.println("Total de Vacinas:\t" + getQtdVacinas() + "\t| População:\t\t\t" + getQtdPopulacao());
