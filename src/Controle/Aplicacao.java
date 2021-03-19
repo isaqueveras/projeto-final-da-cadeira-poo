@@ -7,6 +7,7 @@ import java.util.ArrayList;
  */
 public class Aplicacao {
 	private int qtdPopulacao = 0;
+	private int qtdTotalVacinas = 0;
 	private ArrayList<Vacina> vacinas;
 	private ArrayList<Pessoa> pessoas;
 	 
@@ -20,6 +21,7 @@ public class Aplicacao {
 	
 	public void adicionarVacina(Vacina vacina) {
 		vacinas.add(vacina);
+		setQtdTotalVacinas(getQtdTotalVacinas() + 1);
 	}
 	
 	public void addPessoa(Pessoa pessoa) {
@@ -46,4 +48,13 @@ public class Aplicacao {
 	public void setQtdPopulacao(int qtd) {
 		this.qtdPopulacao = qtd;
 	}
+	
+	public int getQtdTotalVacinas() {
+		return this.qtdTotalVacinas;
+	}
+	
+	public void setQtdTotalVacinas(int qtd) {
+		this.qtdTotalVacinas = qtd;
+	}
+	
 }
