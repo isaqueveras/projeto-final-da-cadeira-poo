@@ -2,14 +2,18 @@
 Projeto Final da Disciplina POO 2020.2
 Um sistema feito em Java para fazer o controle de vacinas de uma cidade, e mostrando as estatisticas das vacinas.
 
+## É um emulador?
+  Sim, é um emulador, onde o gestor de saúde é o responsável pela administração da secretaria de saúde da sua cidade.
+  <br>
+  O gestor pode cadastrar, editar, listar e excluir vacinas, poderá também cadastrar e vacinar a sua população.
+  <br>
+  Ele também consegue ver todas as estatísticas e dados da vacinação, escolhendo uma vacina em específico, ou ver todos os dados em um painel geral.
 ## Objetivos
   Criar um sistema simples para poder cadastrar quantidade de vacinas de um cidade e mostrar as estatisticas com os dados que vão ser gerenciados pelo algoritmo. O sistema deve mostrar as porcentagens de vacinas usadas e de quantas pessoas já tomaram as vacinas, também mostrará quando as vacinas acabar ou sobrar.
 
-## Etapas
-
 ### Funcionalidades
-  - [ ] Cadastrar vacinas
-  - [ ] Listar vacinas
+  - [x] Cadastrar vacinas
+  - [x] Listar vacinas
   - [ ] Editar vacina
   - [ ] Excluir vacina
   - [x] Vacinar uma pessoa ou grupos de pessoas

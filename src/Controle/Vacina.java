@@ -109,7 +109,7 @@ public class Vacina extends Aplicacao {
 	}
 	
 	public void getPainelDados() {
-		System.out.println("-------------------------- Vacina "+ getNome() + "----------------------------------");
+		System.out.println("\n-------------------------- Vacina "+ getNome() + "----------------------------------");
 		System.out.println("\t\tFaixa etária: " + getfaixaEtariaInicio() + " anos à "+ getfaixaEtariaFim() + " anos");
 		System.out.println("--------------------------------------------------------------------------");
 		System.out.println("Total de Vacinas:\t" + getQtdVacinas() + "\t| População:\t\t\t" + getQtdPopulacao());

@@ -9,6 +9,16 @@ public class Main {
 		int populacao = 10;
 		Aplicacao app = new Aplicacao(populacao);
 		
+		// Criando pessoas
+		Pessoa p1 = new Pessoa("Isaque Véras", 19, "Tejubana");
+		Pessoa p2 = new Pessoa("Ismael Véras", 19, "Centro");
+		
+		// Adicionar uma pessoa na cidade
+		app.addPessoa(p1);
+		app.addPessoa(p2);
+		
+		app.listarPessoas();
+		
 		// 1° Vacina
 		Vacina va = new Vacina(populacao);
 		va.setQtdVacinas(106);
@@ -27,7 +37,7 @@ public class Main {
 		va1.setfaixaEtariaInicio(40);
 		va1.setfaixaEtariaFim(60);
 		app.adicionarVacina(va1);
-		va1.vacinar(10, 45); // vacinar usando a vacina da Coronavac
+		va1.vacinar(8, 45); // vacinar usando a vacina da Coronavac
 		
 		// 3° Vacina
 		Vacina va2 = new Vacina(populacao);
