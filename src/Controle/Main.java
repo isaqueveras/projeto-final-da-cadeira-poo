@@ -17,17 +17,20 @@ public class Main {
 		app.addPessoa(p1);
 		app.addPessoa(p2);
 		
-		app.listarPessoas();
+		//app.listarPessoas();
 		
 		// 1° Vacina
 		Vacina va = new Vacina(app.getQtdPopulacao());
-		va.setQtdVacinas(106);
+		va.setQtdVacinas(2);
 		va.setNome("Pfizer");
 		va.setDescricao("Vacina contra o corona");
 		va.setfaixaEtariaInicio(10);
 		va.setfaixaEtariaFim(20);
 		app.adicionarVacina(va);
-		//va.vacinar(2, 15); // vacinar usando a vacina da Pfizer
+		
+		va.vacinar(p1); // Vacinar uma pessoa em específico
+		va.vacinar(p2); // Vacinar uma pessoa em específico
+		va.vacinar(p1); // Vacinar uma pessoa em específico
 		
 		// 2° Vacina
 		Vacina va1 = new Vacina(app.getQtdPopulacao());
