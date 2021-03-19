@@ -33,12 +33,14 @@ public class Aplicacao {
 		System.out.println("-> Vacinas");
 		for (Vacina vacina : vacinas) 
 			if(vacina instanceof Vacina) System.out.println("Nome: " +((Vacina) vacina).getNome() + "\t| Descrição: " + ((Vacina) vacina).getDescricao() + "\t| Quantidade: " + ((Vacina) vacina).getQtdVacinas() + " \t| Faixa Etária: " + ((Vacina) vacina).getfaixaEtariaInicio() + " à " + ((Vacina) vacina).getfaixaEtariaFim());
+		System.out.println("");
 	}
 	
 	public void listarPessoas() {
 		System.out.println("-> "+ pessoas.size() +" Pessoas (População)");
 		for (Pessoa pessoa : pessoas) 
-			if(pessoa instanceof Pessoa) System.out.println("Nome: " + ((Pessoa) pessoa).getNome() + "\t| Idade: " + ((Pessoa) pessoa).getIdade() + " \t| Bairro: " + ((Pessoa) pessoa).getBairro());
+			if(pessoa instanceof Pessoa) System.out.println("Nome: " + ((Pessoa) pessoa).getNome() + "\t| Idade: " + ((Pessoa) pessoa).getIdade() + " anos \t| Bairro: " + ((Pessoa) pessoa).getBairro());
+		System.out.println("");
 	}
 	
 	public int getQtdPopulacao() {

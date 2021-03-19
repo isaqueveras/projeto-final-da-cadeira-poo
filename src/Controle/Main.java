@@ -20,8 +20,10 @@ public class Main {
 		app.addPessoa(p1);
 		app.addPessoa(p2);
 		app.addPessoa(p3);
+		app.addPessoa(p4);
+		app.addPessoa(p5);
 		
-		//app.listarPessoas();
+		app.listarPessoas();
 		
 		// 1° Vacina
 		Vacina va = new Vacina(app.getQtdPopulacao());
@@ -50,19 +52,17 @@ public class Main {
 		va2.setDescricao("Vacina contra a gripe");
 		va2.setfaixaEtariaInicio(1);
 		va2.setfaixaEtariaFim(60);
-		//va2.vacinar(2, 8); // vacinar usando a vacina da gripe
 		
 		app.adicionarVacina(va2);
-		//app.listarVacinas();
+		app.listarVacinas();
 		
 		// Passando a pessoa e a vacina
 		va.vacinar(p1, va1); 	// Vacinar uma pessoa em específico
 		va.vacinar(p2, va1); 	// Vacinar uma pessoa em específico
 		va.vacinar(p3, va); 	// Vacinar uma pessoa em específico
 		va.vacinar(p4, va); 	// Vacinar uma pessoa em específico
-		va.vacinar(p5, va2);	// Vacinar uma pessoa em específico
-		va.vacinar(p1, va2); 	// Vacinar uma pessoa em específico
-		va.vacinar(p5, va); 	// Vacinar uma pessoa em específico
+		va.vacinar(p1, va1);	// Vacinar uma pessoa em específico
+		va.vacinar(p1, va1); 	// Vacinar uma pessoa em específico
 		
 		va.getPainelDados();
 		va1.getPainelDados();

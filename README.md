@@ -17,7 +17,7 @@ Um sistema feito em Java para fazer o controle de vacinas de uma cidade, e mostr
   - [x] Listar vacinas
   - [ ] Editar vacina
   - [ ] Excluir vacina
-  - [x] Vacinar uma pessoa ou grupos de pessoas
+  - [x] Vacinar uma pessoa, passando uma pessoa e a vacina
   - [x] Cadastrar a faixa etária das pessoas que podem tomar a vacina
     - Somente pessoas que se encaixa na faixa etária poderá tomar a vacina
     - Caso contrário, mostre dizendo que não é possível
