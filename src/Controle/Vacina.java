@@ -2,7 +2,6 @@ package Controle;
 
 /**
  * @author Isaque Véras
- *
  */
 public class Vacina extends Aplicacao {
 	private int qtdVacinas = 0;
@@ -16,8 +15,8 @@ public class Vacina extends Aplicacao {
 	private int pessoasVacinadas = 0;
 	private int pessoasNaoVacinadas = 0;
 
-	public Vacina(int populacao) {
-		super(populacao);
+	public Vacina(int qtdPopulacao) {
+		super(qtdPopulacao);
 	}
 	 
 	public void setNome(String nome) {
