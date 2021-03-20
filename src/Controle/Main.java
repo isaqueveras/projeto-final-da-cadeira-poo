@@ -86,5 +86,6 @@ public class Main {
 		app.getPainelDadosVacina(2);
 		app.getPainelDadosVacina(3);
 		app.getPainelDadosVacina(4);
+		app.getPainelDadosVacina(8);
 	}
 }

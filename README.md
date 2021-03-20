@@ -43,3 +43,40 @@ Um sistema feito em Java para fazer o controle de vacinas de uma cidade, e mostr
 
 # UML
 ![](Controle-de-vacinas.jpg)
+
+## Comandos (Main Interativa)
+
+### Adicionar uma pessoa
+/addPessoa [nome] [idade] [bairro] <br>
+/addPessoa IsaqueVeras 19 Centro <br>
+/addPessoa JoaoSilva 45 Centro <br>
+/addPessoa MariaMoreira 85 Centro <br>
+/addPessoa Antonio 55 Centro
+
+### Listar pessoas
+/listarPessoas
+
+### Adicionar vacina
+/addVacina [nomeDaVacina] [descVacina] [quantasVacinas] [faixaEtariaInicio] [faixaEtariaFim] <br>
+/addVacina Pfizer vacina-contra-o-covid 2 50 80 <br>
+/addVacina Coronavac vacina-contra-o-covid 6 50 80 <br>
+
+### Listar vacinas
+/listarVacinas
+
+### Editar vacina
+/editVacina [indexDaVacina] [nomeDaVacina] [descVacina] [quantasVacinas] [faixaEtariaInicio] [faixaEtariaFim] <br>
+/editVacina 2 PfizerEditado vacina-contra-o-covid-editado 7 21 61 <br>
+
+### Vacinar
+/vacinar [IdPessoa] [idVacina] <br>
+/vacinar 1 1 <br>
+/vacinar 4 1
+
+### Painel da vacina
+/painel [idVacina] <br>
+/painel 1 <br>
+/painel 2
+
+### Finalizar programa
+/fim

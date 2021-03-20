@@ -25,6 +25,7 @@ public class Aplicacao {
 	}
 	
 	public void editarVacina(int index, Vacina vacina) {
+		index--;
 		vacinas.set(index, vacina);
 		System.out.println("A vacina da " + vacina.getNome() + " foi editado com sucesso");
 	}
@@ -96,13 +97,15 @@ public class Aplicacao {
 	public void getPainelDadosVacina(int index) {
 		index--; // Decrementa o index com -1, pois o arrayList começa com 0
 		
-		System.out.println("\n--------------------------------------------------------------------------");
-		System.out.println("---> Vacina "+ vacinas.get(index).getNome() + "\t --> Faixa etária: " + vacinas.get(index).getfaixaEtariaInicio() + " anos à "+ vacinas.get(index).getfaixaEtariaFim() + " anos");
-		System.out.println("--------------------------------------------------------------------------");
-		System.out.println("Total de Vacinas:\t" + vacinas.get(index).getQtdVacinas() + "\t| População:\t\t\t" + getQtdPopulacao());
-		System.out.println("Pessoas vacinadas:\t" + vacinas.get(index).getPessoasVacinadas() + "\t| Pessoas não vacinadas:\t" + vacinas.get(index).getPessoasNaoVacinadas());
-		System.out.println("Vacinados:\t\t" + vacinas.get(index).getPorcengemVacinados() + "%" + "\t| Não vacinados:\t\t" + vacinas.get(index).getPorcengemNaoVacinados() + "%");
-		System.out.println("--------------------------------------------------------------------------");
+		if (vacinas.size() > index) {
+			System.out.println("\n--------------------------------------------------------------------------");
+			System.out.println("---> Vacina "+ vacinas.get(index).getNome() + "\t --> Faixa etária: " + vacinas.get(index).getfaixaEtariaInicio() + " anos à "+ vacinas.get(index).getfaixaEtariaFim() + " anos");
+			System.out.println("--------------------------------------------------------------------------");
+			System.out.println("Total de Vacinas:\t" + vacinas.get(index).getQtdVacinas() + "\t| População:\t\t\t" + getQtdPopulacao());
+			System.out.println("Pessoas vacinadas:\t" + vacinas.get(index).getPessoasVacinadas() + "\t| Pessoas não vacinadas:\t" + vacinas.get(index).getPessoasNaoVacinadas());
+			System.out.println("Vacinados:\t\t" + vacinas.get(index).getPorcengemVacinados() + "%" + "\t| Não vacinados:\t\t" + vacinas.get(index).getPorcengemNaoVacinados() + "%");
+			System.out.println("--------------------------------------------------------------------------");
+		} else System.out.println("fail: esse painel não existe");
 	}
 	
 }
