@@ -105,14 +105,4 @@ public class Vacina extends Aplicacao {
 			System.out.println("fail: não é possível vacinar, a idade de "+ pessoa.getNome() +" não se encaixa dentro da faixa etária!");
 		}
 	}
-	
-	public void getPainelDados() {
-		System.out.println("\n--------------------------------------------------------------------------");
-		System.out.println("---> Vacina "+ getNome() + "\t | Faixa etária: " + getfaixaEtariaInicio() + " anos à "+ getfaixaEtariaFim() + " anos");
-		System.out.println("--------------------------------------------------------------------------");
-		System.out.println("Total de Vacinas:\t" + getQtdVacinas() + "\t| População:\t\t\t" + getQtdPopulacao());
-		System.out.println("Pessoas vacinadas:\t" + getPessoasVacinadas() + "\t| Pessoas não vacinadas:\t" + getPessoasNaoVacinadas());
-		System.out.println("Vacinados:\t\t" + getPorcengemVacinados() + "%" + "\t| Não vacinados:\t\t" + getPorcengemNaoVacinados() + "%");
-		System.out.println("--------------------------------------------------------------------------");
-	}
 }

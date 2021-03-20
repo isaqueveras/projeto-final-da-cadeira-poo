@@ -34,16 +34,14 @@ public class Main {
 		va.setfaixaEtariaFim(20);
 		app.adicionarVacina(va);
 		
-		
 		// 2° Vacina
 		Vacina va1 = new Vacina(app.getQtdPopulacao());
 		va1.setQtdVacinas(10);
-		va1.setNome("Coronavac");
+		va1.setNome("Coronav");
 		va1.setDescricao("Vacina contra o corona");
 		va1.setfaixaEtariaInicio(40);
 		va1.setfaixaEtariaFim(60);
 		app.adicionarVacina(va1);
-		//va1.vacinar(2, 45); // vacinar usando a vacina da Coronavac
 		
 		// 3° Vacina
 		Vacina va2 = new Vacina(app.getQtdPopulacao());
@@ -64,8 +62,18 @@ public class Main {
 		va.vacinar(p1, va1);	// Vacinar uma pessoa em específico
 		va.vacinar(p1, va1); 	// Vacinar uma pessoa em específico
 		
-		va.getPainelDados();
-		va1.getPainelDados();
-		va2.getPainelDados();
+		Vacina vacina = new Vacina(app.getQtdPopulacao());
+		vacina.setQtdVacinas(44);
+		vacina.setNome("Isaque");
+		vacina.setDescricao("Vacina contra o isaque");
+		vacina.setfaixaEtariaInicio(44);
+		vacina.setfaixaEtariaFim(45);
+		
+		app.editarVacina(2, vacina);
+		app.listarVacinas();
+
+		app.getPainelDadosVacina(1);
+		app.getPainelDadosVacina(2);
+		app.getPainelDadosVacina(3);
 	}
 }
