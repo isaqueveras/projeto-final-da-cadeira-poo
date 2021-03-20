@@ -77,7 +77,7 @@ public class Vacina extends Aplicacao {
 		return this.pessoasVacinadas;
 	}
 	
-	public void setPessoasVacinadas(Vacina vacina, int pessoas) {
+	public void setPessoasVacinadas(int pessoas) {
 		this.pessoasVacinadas = pessoas;
 	}
 	
@@ -91,7 +91,7 @@ public class Vacina extends Aplicacao {
 			/* Só pode vacinar se existir vacinas, e se o restante que falta para ser 
 			 * vacinado for menor ou igual a quantidade de pessoas não vacinadas */
 			if (vacina.getQtdVacinas() >= 1 && 1 <= vacina.getPessoasNaoVacinadas()) {
-				vacina.setPessoasVacinadas(vacina, 1 + vacina.getPessoasVacinadas());
+				vacina.setPessoasVacinadas(1 + vacina.getPessoasVacinadas());
 				vacina.setQtdVacinas(vacina.getQtdVacinas() - 1);
 				
 				System.out.println(pessoa.getNome() + " com "+ pessoa.getIdade() +" anos, foi vacinado com a vacina " + vacina.getNome());

@@ -72,11 +72,32 @@ public class Aplicacao {
 		this.qtdTotalVacinas = qtd;
 	}
 	
+	public void vacinar(int indexPessoa, int indexVacina) {
+		indexPessoa--;
+		indexVacina--;
+		if (pessoas.get(indexPessoa).getIdade() >= vacinas.get(indexVacina).getfaixaEtariaInicio() && pessoas.get(indexPessoa).getIdade() <= vacinas.get(indexVacina).getfaixaEtariaFim()) { // Para continuar, tem que se encaixar na faixa de idade!	
+			/* Só pode vacinar se existir vacinas, e se o restante que falta para ser 
+			 * vacinado for menor ou igual a quantidade de pessoas não vacinadas */
+			if (vacinas.get(indexVacina).getQtdVacinas() >= 1 && 1 <= vacinas.get(indexVacina).getPessoasNaoVacinadas()) {
+				vacinas.get(indexVacina).setPessoasVacinadas(1 + vacinas.get(indexVacina).getPessoasVacinadas());
+				vacinas.get(indexVacina).setQtdVacinas(vacinas.get(indexVacina).getQtdVacinas() - 1);
+				
+				System.out.println(pessoas.get(indexPessoa).getNome() + " com "+ pessoas.get(indexPessoa).getIdade() +" anos, foi vacinado com a vacina " + vacinas.get(indexVacina).getNome());
+			} else if (vacinas.get(indexVacina).getQtdVacinas() == 0) {
+				System.out.println("fail: não é possível vacinar " + pessoas.get(indexPessoa).getNome() + ", pois não tem vacina disponível");
+			}else {
+				System.out.println("fail: não é possível vacinar " + pessoas.get(indexPessoa).getNome() + ", pois não tem vacina disponível");
+			}
+		} else {
+			System.out.println("fail: não é possível vacinar, a idade de "+ pessoas.get(indexPessoa).getNome() +" não se encaixa dentro da faixa etária!");
+		}
+	}
+	
 	public void getPainelDadosVacina(int index) {
-		index = index - 1; // Decrementa o index com -1, pois o arrayList começa com 0
+		index--; // Decrementa o index com -1, pois o arrayList começa com 0
 		
 		System.out.println("\n--------------------------------------------------------------------------");
-		System.out.println("---> Vacina "+ vacinas.get(index).getNome() + "\t | Faixa etária: " + vacinas.get(index).getfaixaEtariaInicio() + " anos à "+ vacinas.get(index).getfaixaEtariaFim() + " anos");
+		System.out.println("---> Vacina "+ vacinas.get(index).getNome() + "\t --> Faixa etária: " + vacinas.get(index).getfaixaEtariaInicio() + " anos à "+ vacinas.get(index).getfaixaEtariaFim() + " anos");
 		System.out.println("--------------------------------------------------------------------------");
 		System.out.println("Total de Vacinas:\t" + vacinas.get(index).getQtdVacinas() + "\t| População:\t\t\t" + getQtdPopulacao());
 		System.out.println("Pessoas vacinadas:\t" + vacinas.get(index).getPessoasVacinadas() + "\t| Pessoas não vacinadas:\t" + vacinas.get(index).getPessoasNaoVacinadas());

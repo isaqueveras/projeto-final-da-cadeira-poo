@@ -15,12 +15,13 @@ Um sistema feito em Java para fazer o controle de vacinas de uma cidade, e mostr
   ### Vacinas
   - [x] Cadastrar vacinas
   - [x] Listar vacinas
-  - [ ] Editar vacina
+  - [x] Editar vacina
   - [ ] Excluir vacina
   - [x] Vacinar uma pessoa, passando uma pessoa e a vacina
   - [x] Cadastrar a faixa etária das pessoas que podem tomar a vacina
     - Somente pessoas que se encaixa na faixa etária poderá tomar a vacina
     - Caso contrário, mostre dizendo que não é possível
+  - [x] Listar dados de uma vacina dentro do arrayList
   
   ### Pessoas
   - [x] Cadastrar pessoas

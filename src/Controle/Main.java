@@ -52,15 +52,6 @@ public class Main {
 		va2.setfaixaEtariaFim(60);
 		
 		app.adicionarVacina(va2);
-		app.listarVacinas();
-		
-		// Passando a pessoa e a vacina
-		va.vacinar(p1, va1); 	// Vacinar uma pessoa em específico
-		va.vacinar(p2, va1); 	// Vacinar uma pessoa em específico
-		va.vacinar(p3, va); 	// Vacinar uma pessoa em específico
-		va.vacinar(p4, va); 	// Vacinar uma pessoa em específico
-		va.vacinar(p1, va1);	// Vacinar uma pessoa em específico
-		va.vacinar(p1, va1); 	// Vacinar uma pessoa em específico
 		
 		Vacina vacina = new Vacina(app.getQtdPopulacao());
 		vacina.setQtdVacinas(44);
@@ -72,8 +63,28 @@ public class Main {
 		app.editarVacina(2, vacina);
 		app.listarVacinas();
 
+		app.vacinar(2, 3);
+		app.vacinar(4, 1);
+		
+		Vacina fiocruz = new Vacina(app.getQtdPopulacao());
+		fiocruz.setQtdVacinas(12);
+		fiocruz.setNome("Fiocruz");
+		fiocruz.setDescricao("Vacina contra o covid");
+		fiocruz.setfaixaEtariaInicio(30);
+		fiocruz.setfaixaEtariaFim(100);
+		app.adicionarVacina(fiocruz);
+		
+		app.listarVacinas();
+		
+		app.vacinar(1, 4);
+		app.vacinar(1, 4);
+		app.vacinar(1, 4);
+		app.vacinar(1, 4);
+		app.vacinar(1, 4);
+
 		app.getPainelDadosVacina(1);
 		app.getPainelDadosVacina(2);
 		app.getPainelDadosVacina(3);
+		app.getPainelDadosVacina(4);
 	}
 }
