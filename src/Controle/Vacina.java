@@ -86,23 +86,4 @@ public class Vacina extends Aplicacao {
 		return this.pessoasNaoVacinadas;
 	}
 	
-	public void vacinar(Pessoa pessoa, Vacina vacina) {
-		if (pessoa.getIdade() >= vacina.getfaixaEtariaInicio() && pessoa.getIdade() <= vacina.getfaixaEtariaFim()) { // Para continuar, tem que se encaixar na faixa de idade!	
-			/* Só pode vacinar se existir vacinas, e se o restante que falta para ser 
-			 * vacinado for menor ou igual a quantidade de pessoas não vacinadas */
-			if (vacina.getQtdVacinas() >= 1 && 1 <= vacina.getPessoasNaoVacinadas()) {
-				vacina.setPessoasVacinadas(1 + vacina.getPessoasVacinadas());
-				vacina.setQtdVacinas(vacina.getQtdVacinas() - 1);
-				
-				System.out.println(pessoa.getNome() + " com "+ pessoa.getIdade() +" anos, foi vacinado com a vacina " + vacina.getNome());
-			} else if (vacina.getQtdVacinas() == 0) {
-				System.out.println("fail: não é possível vacinar " + pessoa.getNome() + ", pois não tem vacina disponível");
-			}else {
-				//vacina.setPessoasVacinadas(vacina, 1 + vacina.getPessoasVacinadas());
-				System.out.println("fail: não é possível vacinar " + pessoa.getNome() + ", pois não tem vacina disponível");
-			}
-		} else {
-			System.out.println("fail: não é possível vacinar, a idade de "+ pessoa.getNome() +" não se encaixa dentro da faixa etária!");
-		}
-	}
 }

@@ -78,5 +78,8 @@ Um sistema feito em Java para fazer o controle de vacinas de uma cidade, e mostr
 /painel 1 <br>
 /painel 2
 
+### Relatório Geral
+/relatorio
+
 ### Finalizar programa
 /fim

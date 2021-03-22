@@ -23,7 +23,7 @@ public class Main {
 		app.addPessoa(p4);
 		app.addPessoa(p5);
 		
-		app.listarPessoas();
+		//app.listarPessoas();
 		
 		// 1° Vacina
 		Vacina va = new Vacina(app.getQtdPopulacao());
@@ -60,8 +60,8 @@ public class Main {
 		vacina.setfaixaEtariaInicio(44);
 		vacina.setfaixaEtariaFim(45);
 		
-		app.editarVacina(2, vacina);
-		app.listarVacinas();
+		//app.editarVacina(2, vacina);
+		//app.listarVacinas();
 
 		app.vacinar(2, 3);
 		app.vacinar(4, 1);
@@ -74,18 +74,20 @@ public class Main {
 		fiocruz.setfaixaEtariaFim(100);
 		app.adicionarVacina(fiocruz);
 		
-		app.listarVacinas();
+		//app.listarVacinas();
 		
-		app.vacinar(1, 4);
-		app.vacinar(1, 4);
-		app.vacinar(1, 4);
-		app.vacinar(1, 4);
-		app.vacinar(1, 4);
+		//app.vacinar(1, 4);
+		//app.vacinar(1, 4);
+		//app.vacinar(1, 4);
+		//app.vacinar(1, 4);
+		//app.vacinar(1, 4);
 
 		app.getPainelDadosVacina(1);
-		app.getPainelDadosVacina(2);
-		app.getPainelDadosVacina(3);
-		app.getPainelDadosVacina(4);
-		app.getPainelDadosVacina(8);
+		//app.getPainelDadosVacina(2);
+		//app.getPainelDadosVacina(3);
+		//app.getPainelDadosVacina(4);
+		//app.getPainelDadosVacina(8);
+		
+		app.getPainelGeral();
 	}
 }

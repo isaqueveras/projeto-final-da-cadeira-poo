@@ -75,6 +75,9 @@ public class MainInterativa {
 	    		app.getPainelDadosVacina(indexPainel);
 
 	      		break;
+	      	case "/relatorio":
+	      		app.getPainelGeral();
+	        	break;
 	      	case "/fim":
 	        	break;
 	      }

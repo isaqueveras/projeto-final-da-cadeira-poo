@@ -7,11 +7,10 @@ import java.util.ArrayList;
  */
 public class Aplicacao {
 	private int qtdPopulacao = 0;
-	private int qtdTotalVacinas = 0;
+	private int qtdTiposDeVacinas = 0;
+	private int pessoasVacinadas = 0;
 	private ArrayList<Vacina> vacinas;
 	private ArrayList<Pessoa> pessoas;
-	 
-	Vacina va = null;
 	
 	public Aplicacao(int qtdPopulacao) {
 		vacinas = new ArrayList<Vacina>();
@@ -21,7 +20,7 @@ public class Aplicacao {
 	
 	public void adicionarVacina(Vacina vacina) {
 		vacinas.add(vacina);
-		setQtdTotalVacinas(getQtdTotalVacinas() + 1);
+		setQtdTiposDeVacinas(getQtdTiposDeVacinas() + 1);
 	}
 	
 	public void editarVacina(int index, Vacina vacina) {
@@ -66,11 +65,29 @@ public class Aplicacao {
 	}
 	
 	public int getQtdTotalVacinas() {
-		return this.qtdTotalVacinas;
+		int qtd = 0, i = 0;
+		for (Vacina vacina : vacinas)
+			if(vacina instanceof Vacina) {
+				qtd = vacinas.get(i).getQtdVacinas() + qtd;
+				i++;
+			}
+		return qtd;
 	}
 	
-	public void setQtdTotalVacinas(int qtd) {
-		this.qtdTotalVacinas = qtd;
+	public int getQtdTiposDeVacinas() {
+		return this.qtdTiposDeVacinas;
+	}
+	
+	public void setQtdTiposDeVacinas(int qtd) {
+		this.qtdTiposDeVacinas = qtd;
+	}
+
+	public int getPessoasVacinadas() {
+		return pessoasVacinadas;
+	}
+	
+	public void setPessoasVacinadas(int qtd) {
+		this.pessoasVacinadas = qtd;
 	}
 	
 	public void vacinar(int indexPessoa, int indexVacina) {
@@ -82,6 +99,8 @@ public class Aplicacao {
 			if (vacinas.get(indexVacina).getQtdVacinas() >= 1 && 1 <= vacinas.get(indexVacina).getPessoasNaoVacinadas()) {
 				vacinas.get(indexVacina).setPessoasVacinadas(1 + vacinas.get(indexVacina).getPessoasVacinadas());
 				vacinas.get(indexVacina).setQtdVacinas(vacinas.get(indexVacina).getQtdVacinas() - 1);
+				
+				setPessoasVacinadas(getPessoasVacinadas() + 1); // Incremento mais 1 para pessoas vacinadas
 				
 				System.out.println(pessoas.get(indexPessoa).getNome() + " com "+ pessoas.get(indexPessoa).getIdade() +" anos, foi vacinado com a vacina " + vacinas.get(indexVacina).getNome());
 			} else if (vacinas.get(indexVacina).getQtdVacinas() == 0) {
@@ -108,4 +127,13 @@ public class Aplicacao {
 		} else System.out.println("fail: esse painel não existe");
 	}
 	
+
+	public void getPainelGeral() {
+		System.out.println("\n--------------------------------------------------------------------------");
+		System.out.println("---> Relatório Geral");
+		System.out.println("--------------------------------------------------------------------------");
+		System.out.println("---> População: "+ getQtdPopulacao() + " pessoas" + "\t---> Pessoas vacinadas: "+ getPessoasVacinadas() + " pessoas");
+		System.out.println("---> Vacinas: "+ getQtdTiposDeVacinas() + " tipos" + "\t\t---> Quantidade de vacinas: "+ getQtdTotalVacinas());
+		System.out.println("--------------------------------------------------------------------------");
+	}
 }
