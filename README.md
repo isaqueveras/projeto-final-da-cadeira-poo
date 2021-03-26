@@ -1,4 +1,6 @@
 # Sistema para controle de vacinas
+#### Autor > Isaque Véras
+
 Projeto Final da Disciplina POO 2020.2
 Um sistema feito em Java para fazer o controle de vacinas de uma cidade, e mostrando as estatisticas das vacinas.
 
@@ -16,7 +18,7 @@ Um sistema feito em Java para fazer o controle de vacinas de uma cidade, e mostr
   - [x] Cadastrar vacinas
   - [x] Listar vacinas
   - [x] Editar vacina
-  - [ ] Excluir vacina
+  - [x] Excluir vacina
   - [x] Vacinar uma pessoa, passando uma pessoa e a vacina
   - [x] Cadastrar a faixa etária das pessoas que podem tomar a vacina
     - Somente pessoas que se encaixa na faixa etária poderá tomar a vacina
@@ -26,7 +28,7 @@ Um sistema feito em Java para fazer o controle de vacinas de uma cidade, e mostr
   ### Pessoas
   - [x] Cadastrar pessoas
   - [x] Listar pessoas
-  - [ ] Editar pessoas
+  - [x] Editar pessoas
   - [ ] Excluir pessoas
   - [ ] Buscar pessoas
   - [ ] Listar dados de uma pessoa
@@ -67,6 +69,10 @@ Um sistema feito em Java para fazer o controle de vacinas de uma cidade, e mostr
 ### Editar vacina
 /editVacina [indexDaVacina] [nomeDaVacina] [descVacina] [quantasVacinas] [faixaEtariaInicio] [faixaEtariaFim] <br>
 /editVacina 2 PfizerEditado vacina-contra-o-covid-editado 7 21 61 <br>
+
+### Excluir vacina
+/excluirVacina [index] <br>
+/excluirVacina 2
 
 ### Vacinar
 /vacinar [IdPessoa] [idVacina] <br>

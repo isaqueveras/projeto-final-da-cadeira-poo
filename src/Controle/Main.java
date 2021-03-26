@@ -82,11 +82,15 @@ public class Main {
 		//app.vacinar(1, 4);
 		//app.vacinar(1, 4);
 		
-		
 		Pessoa pessoaEditada = new Pessoa("Silvestre", 47, "Centro");
 		app.editarPessoa(5, pessoaEditada);
 		
 		app.listarPessoas();
+		
+		app.excluirVacina(3);
+		app.listarVacinas();
+		app.vacinar(3, 1);
+		app.vacinar(3, 1);
 		
 		app.getPainelDadosVacina(1);
 		//app.getPainelDadosVacina(2);

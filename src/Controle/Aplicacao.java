@@ -29,6 +29,12 @@ public class Aplicacao {
 		System.out.println("A vacina da " + vacina.getNome() + " foi editado com sucesso");
 	}
 	
+	public void excluirVacina(int index) {
+		index--;
+		vacinas.remove(index);
+		System.out.println("A vacina da " + vacinas.get(index).getNome() + " foi excluido");
+	}
+	
 	public void addPessoa(Pessoa pessoa) {
 		pessoas.add(pessoa);
 		setQtdPopulacao(getQtdPopulacao() + 1);

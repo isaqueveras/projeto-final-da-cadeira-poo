@@ -64,6 +64,10 @@ public class MainInterativa {
 	      	case "/listarVacinas":
 	      		app.listarVacinas();
 	        	break;
+	      	case "/excluirVacina":
+	      		int indexExcluirVacina = Integer.parseInt(cmd[1]);
+	      		app.excluirVacina(indexExcluirVacina);
+	        	break;
 	      	case "/vacinar":
 	      		int indexP = Integer.parseInt(cmd[1]);
 	      		int indexV = Integer.parseInt(cmd[2]);
