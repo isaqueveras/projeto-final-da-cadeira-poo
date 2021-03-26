@@ -43,8 +43,11 @@ Um sistema feito em Java para fazer o controle de vacinas de uma cidade, e mostr
   - [ ] Mostrar a quantidade de pessoas (dentro da faixa etária) vacinadas
   - [ ] Mostrar a quantidade de pessoas (dentro da faixa etária) não vacinadas
 
-# UML
+### UML v1
 ![](Controle-de-vacinas.jpg)
+
+### UML v2
+![](Diagrama-v2.png)
 
 ## Comandos (Main Interativa)
 
