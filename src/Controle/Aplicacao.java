@@ -34,6 +34,12 @@ public class Aplicacao {
 		setQtdPopulacao(getQtdPopulacao() + 1);
 	}
 	
+	public void editarPessoa(int index, Pessoa pessoa) {
+		index--;
+		pessoas.set(index, pessoa);
+		System.out.println(pessoa.getNome() + " foi editado com sucesso");
+	}
+	
 	public void listarVacinas() {
 		int v = 1;
 		System.out.println("\n-> "+ vacinas.size() +" tipos de vacinas");
