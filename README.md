@@ -29,9 +29,6 @@ Um sistema feito em Java para fazer o controle de vacinas de uma cidade, e mostr
   - [x] Cadastrar pessoas
   - [x] Listar pessoas
   - [x] Editar pessoas
-  - [ ] Excluir pessoas
-  - [ ] Buscar pessoas
-  - [ ] Listar dados de uma pessoa
 
 ### Estatísticas
   - [x] Mostrar a quantidade de vacinas
@@ -40,8 +37,6 @@ Um sistema feito em Java para fazer o controle de vacinas de uma cidade, e mostr
   - [x] Mostrar a porcentagem da população que foram vacinadas
   - [x] Mostrar a porcentagem de vacinas existentes
   - [x] Mostrar a porcentagem de pessoas já vacinadas
-  - [ ] Mostrar a quantidade de pessoas (dentro da faixa etária) vacinadas
-  - [ ] Mostrar a quantidade de pessoas (dentro da faixa etária) não vacinadas
 
 ### UML v1
 ![](Controle-de-vacinas.jpg)
